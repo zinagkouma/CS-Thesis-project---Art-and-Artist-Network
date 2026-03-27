@@ -1,0 +1,101 @@
+.modal_backdrop {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease;
+}
+
+.modal_content {
+  background: white;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.modal_header {
+  padding: 16px;
+  background: #f8f9fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.modal_header h3 {
+  margin: 0; 
+  font-size: 1.1rem; 
+  color: #333; 
+}
+
+.close-btn {
+  background: none;
+  border: none; 
+  font-size: 1.5rem; 
+  color: #666;
+  cursor: pointer;
+}
+
+.modal_list {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 8px 0;
+}
+
+.modal_item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  text-decoration: none;
+  transition: background 0.1s;
+}
+
+.modal_item:hover { 
+  background: #f4f6ff; 
+}
+
+.modal_avatar {
+  width: 40px; 
+  height: 40px; 
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}
+
+.modal_info { 
+  display: flex; 
+  flex-direction: column; 
+  text-align: left;
+  align-items: flex-start;
+}
+
+.modal_username { 
+  color: #333; 
+  font-weight: 600; 
+  font-size: 0.95rem; 
+}
+
+.modal_role { 
+  color: #777; 
+  font-size: 0.75rem; 
+  text-transform: uppercase; 
+}
+
+
+/*Make stats look clickable*/
+.stat-box.clickable {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.stat-box.clickable:hover {
+  background-color: rgba(0,0,0,0.02);
+  border-radius: 8px;
+}

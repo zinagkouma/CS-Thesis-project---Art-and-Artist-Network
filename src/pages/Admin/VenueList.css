@@ -1,0 +1,156 @@
+/* Main Container */
+.venueList_container {
+  padding: 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.venueList_wrapper {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  padding: 30px;
+}
+
+
+/* Header Section */
+.venueList_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px 30px;
+  border-radius: 12px;
+}
+
+.venueList_header h2 {
+  margin: 0;
+  color: #0a1f4d; 
+}
+
+/* Add Venue Button */
+.addVenue_btn {
+  padding: 10px 20px;
+  background-color: #147d3f; 
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.addVenue_btn:hover {
+  background-color: #0f6231;
+}
+
+.addVenue_btn:active {
+  transform: translateY(2px);
+}
+
+/* Filter Section */
+.venueList_filter {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 30px;
+  border-radius: 12px;
+  
+}
+
+.venueList_filter label {
+  font-weight: 600;
+  color: #333;
+}
+
+.venueList_filter select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.venueList_filter select:focus {
+  border-color: #0a48a4;
+}
+
+/*Venue List*/
+.venueList_list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.venueList_item {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+  border-left: 5px solid #0a48a4; 
+}
+
+.venue_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.venue_top h3 {
+  margin: 0;
+  color: #0a1f4d;
+  font-size: 1.3rem;
+}
+
+/*Venue type badge*/
+.venue_type {
+  background: #f0f4f8;
+  color: #0a48a4;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+
+.venue_details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.venue_details p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.venue_details strong {
+  margin-right: 6px;
+  color: #333;
+}
+
+
+.venue_desc {
+  margin: 10px 0 0 0;
+  color: #666;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+.loading_text, 
+.no-venues_text {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}

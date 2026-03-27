@@ -1,0 +1,292 @@
+.profile_page {
+  min-height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.profile_card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1050px; 
+  min-height: 700px; 
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  margin-bottom: 350px;
+}
+
+.profile_header {
+  height: 155px;
+  background: linear-gradient(200deg, #ce822c 0%, #2061aa 100%); 
+}
+
+.profile_content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 24px;
+  position: relative;
+  margin-top: -28px; 
+  text-align: center;
+}
+
+
+/*Avatar styles*/
+.profile_avatar-wrapper {
+  position: relative; 
+  width: 130px;
+  height: 130px;
+  margin: -65px auto 15px auto;
+}
+
+.profile_avatar {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.avatar_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar_placeholder {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #2a5298;
+}
+
+/*Camera icon overlay*/
+.avatar_edit-overlay {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 36px;
+  height: 36px;
+  background: #333;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.avatar_edit-overlay:hover {
+  background: black;
+  transform: scale(1.05);
+}
+
+
+/*Profile identity and buttons*/
+.profile_identity_row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; 
+  align-items: center;
+  margin-bottom: 5px;
+  gap: 15px;
+}
+
+.profile_identity_row h2 {
+  grid-column: 2;
+  margin: 0;
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.profile_identity_row .edit,
+.profile_identity_row .edit_actions_group {
+  grid-column: 3;
+  position: static;
+  justify-self: start;
+}
+
+
+/*Badge*/
+.profile_badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #e3f2fd;
+  color: #1976d2;
+  margin-bottom: 1rem;
+}
+
+/*Bio section*/
+.profile_bio-wrapper {
+  margin: 10px auto 25px;
+  max-width: 450px;
+  min-height: 80px; 
+}
+
+.profile_bio {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.profile_bio.empty {
+  color: #aaa;
+  font-style: italic;
+}
+
+.bio_input {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  resize: none;
+  box-sizing: border-box;
+  min-height: 80px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.bio_input:focus {
+  border-color: #2a5298;
+}
+
+
+/*Button styles*/
+.btn_icon_text {
+  display: flex;
+  align-items: center;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  gap: 7px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.edit {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  color: #555;
+}
+
+.edit:hover {
+  background-color: #f0f0f0;
+  color: #333;
+  border-color: #bbb;
+}
+
+.edit_actions_group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.save {
+  background-color: green;
+  color: white;
+}
+
+.save:hover {
+  background-color: #1c7730;
+}
+
+.btn_icon.cancel {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background-color: red; 
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn_icon.cancel:hover {
+  background-color: #c82333;
+}
+
+
+/*Stats Container*/
+.profile_stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 2rem;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 1rem 0;
+}
+
+.stat-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #777;
+  text-transform: uppercase;
+}
+
+/* Details Grid */
+.profile_details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 1rem;
+  text-align: left;
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 120px;      
+  box-sizing: border-box;
+}
+
+.detail_item label {
+  display: block;
+  font-size: 0.75rem;
+  color: #888;
+  font-weight: 700;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.detail_item p {
+  margin: 0;
+  color: #333;
+  font-weight: 500;
+}
+
+

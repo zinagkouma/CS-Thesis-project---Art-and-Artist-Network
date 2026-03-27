@@ -1,0 +1,332 @@
+.artistStats {
+  max-width: 1400px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 20px;  
+}
+
+.artistStats_header {
+  margin-bottom: 24px;  
+}
+
+.artistStats_title {
+  margin-bottom: 16px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0a1f4d;
+}
+
+
+/*Tab Menu*/
+.artistStats_tab-container {
+  display: inline-flex;
+  background-color: #0a1f4d;
+  padding: 4px;
+  border-radius: 999px;
+  gap: 2px;
+}   
+
+.stats_tab {
+  padding: 8px 24px;
+  border: none;
+  color: #8fa6d6;  
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: transparent;
+  outline: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.stats_tab.active {
+  background-color: #ffffff; 
+  color: #0a1f4d;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+.stats_tab:hover:not(.active) {
+  color: #ffffff;
+}
+
+
+/* Content Area Placeholder */
+.artistStats_content {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 24px;
+  min-height: 300px;
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/*Followers Tab Layout */
+.artistStats_followers-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+
+/*Metric Cards */
+.artistStats_cards-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.artistStats_card {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+  min-height: 160px;
+}
+
+.artistStats_card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.artistStats_card h3 {
+  margin: 0 0 12px;
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.artistStats_big-num {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0a1f4d;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.artistStats_sub {
+  color: #999;
+  font-size: 0.85rem;
+}
+
+
+/*Trend Indicators */
+.stats_trend {
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stats_trend.positive {
+  color: #10b981; 
+}
+
+.stats_trend.negative {
+  color: #ef4444; 
+}
+
+
+/*Chart Section */
+.artistStats_chart, .artistStats_pie-chart, .artistStats_recent {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.artistStats_chart h3 {
+  margin: 0 0 24px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.artistStats_chart-wrapper {
+  width: 100%;
+  height: 400px; 
+}
+
+
+/*Split layout (chart and recent list) */
+.artistStats_charts-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  margin-top: 24px;
+  margin-bottom: 20px;
+  
+}
+
+
+/*Recent followers panel*/
+.artistStats_recent h3 {
+  margin: 0 0 20px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+/*List items*/
+.recent_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recent_item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #8fa6d6;
+}
+
+.recent_item:last-child {
+  border-bottom: none;
+}
+
+/*Avatar circle*/
+.recent_avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #eef3ff;
+  color: #0a48a4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/*User info*/
+.recent_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.recent_name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #08193e;
+}
+
+.recent_date {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.field_empty {
+  color: #999;
+  font-style: italic;
+  text-align: center;
+  padding: 20px;
+}
+
+
+
+/*Pie chart shii*/
+/* Container for the bottom row */
+.artistStats_row-secondary {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr; 
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.artistStats_pie-chart {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f0f0f0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.pie-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  width: 100%;
+  flex: 1;
+}
+
+
+/*Event tab styles*/
+.stat-star {
+  font-size: 2.5rem;
+  color: #fbc02d;
+  margin-left: 15px;
+}
+
+/*Gauge shii*/
+
+/*Gauge chart container*/
+.gauge_container {
+  width: 100%;
+  height: 150px;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.gauge_score-text {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  padding-bottom: 5px;
+  text-align: center;
+  transform: translateX(-50px);
+}
+
+.score-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0a1f4d;
+  line-height: 1;
+}
+
+.score_max { 
+  font-size: 1.2rem;
+  color: #999; 
+  font-weight: 400;
+}
+
+.score-label {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 3px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.centered {
+  text-align: center;
+  display: block;
+  margin-top: auto;
+}
+
+.artistStats_sub.auto-margin {
+  margin-top: auto;
+  display: block;
+}

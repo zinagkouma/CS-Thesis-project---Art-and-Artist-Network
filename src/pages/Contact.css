@@ -1,0 +1,132 @@
+/*Contact form */
+.contact-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 3rem;
+}
+
+.contact-container p {
+  font-size: 1.4rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.contact-form button {
+  align-self: flex-end;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background: #0a48a4;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.contact-form button:hover {
+  background: #2262e2;
+  color: #fff;
+}
+
+.contact-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.contact-status {
+  text-align: center;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+
+
+/*Spinner while loading */
+.submit-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+@keyframes spin {
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+
+
+/*Bubble message if not logged in */
+.bubble-msg{
+  position: relative;
+  display: inline-block;
+}
+
+.bubble-msg .bubbleText{
+  visibility: hidden;
+  width: max-content;
+  max-width: 180px;
+  background-color: #0a48a4;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 0.5rem;
+  position: absolute;
+
+  top: 50%;
+  left: 115%;               
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.bubble-msg:hover .bubbleText {
+  visibility: visible;
+  opacity: 1;
+}
+
+.bubble-msg .bubbleText::after {
+  content: "";
+  position: absolute;
+  
+  /* center vertically on left edge */
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  
+  border-width: 6px;
+  border-style: solid;
+  /* arrow pointing left */
+  border-color: transparent #0a48a4 transparent transparent;
+}
+  
+
+
+

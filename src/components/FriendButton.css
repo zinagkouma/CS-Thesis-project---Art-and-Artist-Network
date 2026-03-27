@@ -1,0 +1,105 @@
+/*Generic style*/
+.friend_btn {
+  padding: 10px 24px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  position: relative; 
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.friend_btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/*Standard States*/
+.friend_btn.add {
+  background: #0a48a4;
+  color: white;
+}
+
+.friend_btn.pending {
+  background: #fff3e0;
+  color: #ef6c00;
+  border: 1px solid #ef6c00;
+}
+
+.friend_btn.remove {
+  background: #ffebee;
+  color: #c62828;
+}
+.friend_btn.remove:hover {
+    background: #c62828;
+    color: white;
+}
+
+
+.friend_menu-container {
+    position: relative;
+    display: inline-block;
+}
+
+.friend_btn.respond {
+    background: #0a48a4;
+    color: white;
+    padding-right: 18px; 
+    gap: 8px; 
+    z-index: 102; 
+}
+
+.arrow_icon {
+    font-size: 0.7rem;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+/* Rotate arrow when menu is active */
+.friend_btn.respond.active .arrow_icon {
+    transform: rotate(180deg);
+}
+
+
+.friend_dropdown {
+    position: absolute;
+    top: 115%; 
+    right: 0; 
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    min-width: 160px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0;
+    border: 1px solid #eee;
+    z-index: 101;
+}
+
+/* The menu items */
+.dropdown_item {
+    padding: 12px 20px;
+    border: none;
+    background: none;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown_item:hover {
+    background: #f7f9fc;
+}
+
+.dropdown_item.accept { color: #2e7d32; }
+.dropdown_item.reject { color: #c62828; }

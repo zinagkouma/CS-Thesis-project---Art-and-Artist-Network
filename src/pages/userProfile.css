@@ -1,0 +1,232 @@
+.userProf_page {
+  min-height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+
+.userProf_card {
+  width: 100%;
+  max-width: 1050px; 
+  min-height: 700px; 
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  margin-bottom: 350px;
+}
+
+
+.userProf_header {
+  height: 155px;
+  background: linear-gradient(190deg, #ce822c 0%, #2061aa 100%);
+}
+
+.userProf_avatar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: -65px; 
+}
+
+.userProf_image {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid white; 
+  background: white;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+.userProf_body {
+  padding: 10px 40px 40px 40px;
+  text-align: center;
+}
+
+.userProf_name {
+  font-size: 1.8rem;
+  color: #333;
+  margin: 10px 0 8px 0;
+  font-weight: 600;
+}
+
+
+/*Block user*/
+.userProf_name-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  gap: 10px;
+}
+
+.userProf_name-container .userProf_name {
+  margin: 0;
+}
+
+.userProf_menu-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.userProf_menu-icon {
+  color: #888;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.userProf_menu-icon:hover {
+  color: #333;
+}
+
+.userProf_dropdown {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  min-width: 140px;
+  padding: 8px;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
+.block_btn {
+  width: 100%;
+  padding: 10px 12px;
+  background: transparent;
+  color: #d9534f; 
+  border: none;
+  border-radius: 6px;
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.block_btn:hover {
+  background: #ffeeee;
+  color: #c9302c;
+}
+
+
+.userProf_badge {
+  display: inline-block;
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.userProf_badge.artist { background: #eef5ff; color: #3b6ba5; }
+
+.userProf_badge.user { background: #e8f5e9; color: #2e7d32; }
+
+
+/*Follow and Friend buttons*/
+.userProf_action-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.follow_btn {
+  padding: 10px 30px; 
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: 2px solid #3b6ba5;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.follow_btn.follow{
+  background: #3b6ba5;
+  color: white;
+}
+
+.follow_btn.unfollow {
+  background: transparent;
+  color: #3b6ba5;
+}
+
+.follow_btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 107, 165, 0.2);
+}
+
+
+/*User statistics*/
+.userProf_stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px; 
+  margin-bottom: 30px;
+}
+
+.stat-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0a48a4; 
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #888;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+
+
+/*Footer*/
+.userProf_footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: left;
+  width: 100%;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  margin-top: 110px;
+  box-sizing: border-box; 
+}
+
+.footer_item {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-label {
+  display: block;
+  font-size: 0.75rem;
+  color: #999;
+  font-weight: 700;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.footer-value {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+}

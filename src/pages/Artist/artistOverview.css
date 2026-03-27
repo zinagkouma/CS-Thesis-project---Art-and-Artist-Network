@@ -1,0 +1,120 @@
+/*Quick stats widget*/
+.quick_stats-widget {
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  margin-top: 49px;
+  min-width: 0;
+  
+}
+
+.quick-stats_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;  
+}
+
+.header_text h3 {
+  margin: 0 0 5px 0;
+  color: #0a1f4d;
+  font-size: 1.3rem;
+}
+
+.header_text p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #777;  
+}
+
+/*Legend styling*/
+.chart_legend {
+  display: flex;
+  padding: 6px 12px;
+  background: #f9f9f9;
+  gap: 15px;
+  border-radius: 20px;  
+}
+
+.legend_item {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #666;
+  gap: 6px;  
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;  
+}
+
+.legend-dot.blue {
+  background-color: #0a48a4;
+  box-shadow: 0 0 0 2px rgba(10, 72, 164, 0.2);  
+}
+
+.legend-dot.red {
+  background-color: #ff4d4f;
+  box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2);  
+}
+
+/*Chart area*/
+.chart_container {
+  width: 100%;
+  min-height: 0;
+  flex: 1;  
+}
+
+
+.Overview_right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/*Scouting widget*/
+.scout-widget {
+  display: flex;
+  position: relative;
+  top: 65px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 0;
+}
+
+.scout-widget_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+  background: linear-gradient(100deg, #e29806 35%, #083b88 100%); 
+  color: navy;
+  border: 1px solid navy;
+  border-radius: 7px;
+  font-size: 1rem;
+  font-weight: 600;
+  gap: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.scout_icon {
+  width: 46px;
+  height: 46px;
+  margin-right: 15px;
+}
+
+.scout-widget_btn:hover {
+  transform: scale(1.01);
+}
+
+.scout-widget_btn:active {
+  transform: translateY(2px);
+}

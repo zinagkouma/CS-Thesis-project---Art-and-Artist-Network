@@ -1,0 +1,12 @@
+.back {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: calc(100vh - 120px);
+  padding-top: 120px;  
+  width: 100%;
+  min-height: 100vh;
+  background: url('../assets/back.jpg') no-repeat center center;
+  background-size: cover;
+  z-index: 0;
+}

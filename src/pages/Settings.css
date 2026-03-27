@@ -1,0 +1,364 @@
+/*Container*/
+.settings_container {
+  padding: 2rem;
+  min-height: calc(100vh - 80px);
+}
+
+.settings_layout {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: transparent; 
+}
+
+
+/*Top Bar*/
+.settings_top-bar {
+  background-color: white;
+  padding: 1.5rem 2rem 0 2rem;
+  border-radius: 12px 12px 0 0;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+  margin-bottom: 0;
+}
+
+.settings_top-bar h1 {
+  font-size: 1.8rem;
+  color: #003060;
+  margin: 0 0 1.5rem 0;
+}
+
+.settings_tabs {
+  display: flex;
+  gap: 2rem;
+}
+
+.tab-item {
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 0.8rem 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.tab-item:hover {
+  color: #003060;
+}
+
+.tab-item.active {
+  color: #003060;
+  border-bottom-color: #ff9f1c; 
+  font-weight: 600;
+}
+
+.tab-icon {
+  font-size: 1.1rem;
+}
+
+
+/*Content Area*/
+.settings_content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  min-height: 500px;
+}
+
+.settings_content h2 {
+  color: #003060;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.setting_header {
+  margin-bottom: 2rem;
+}
+
+.setting_desc {
+  color: #666;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/*Grid Layout for Account Section*/
+.setting_grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr; 
+  gap: 2rem;
+}
+
+.settings_column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.single-col {
+  max-width: 700px; 
+}
+
+
+/*Cards*/
+.setting_card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+  height: fit-content;
+}
+
+.setting_card h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1.2rem;
+}
+
+
+/*Forms*/
+.settings_form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.settings_form label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.settings_form input, .settings_select {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+
+.settings_form input:focus, .settings_select:focus {
+  outline: none;
+  border-color: #003060;
+  box-shadow: 0 0 0 3px rgba(0, 48, 96, 0.1);
+}
+
+.sub-text {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: -0.8rem;
+  margin-bottom: 1rem;
+}
+
+
+/*Buttons*/
+.btn-primary {
+  background-color: #003060;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.btn-secondary {
+  background-color: #ff9f1c;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+}
+
+
+/*Blocked Users List*/
+.blocked_list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.blocked_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.blocked_item:hover {
+  background-color: #f1f1f1;
+}
+
+.blocked_item-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.blocked_avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+.blocked_name {
+  font-weight: 600;
+  color: #333;
+}
+
+.unblock_btn {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  background-color: #fff;
+  color: #666;
+  border: 1px solid #ccc;
+}
+
+.unblock_btn:hover {
+  background-color: #ff9f1c;
+  color: white;
+  border-color: #ff9f1c;
+}
+
+
+/*Danger Zone*/
+.danger {
+  border: 1px solid #ffd7d7;
+  background-color: #fff8f8;
+}
+
+.danger_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.danger_icon {
+  color: #dc3545;
+}
+
+
+/*Toggles*/
+.toggle-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.toggle-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  flex-shrink: 0; 
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #ff9f1c;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 1.5rem 0;
+}
+
+.empty_state {
+  color: #999;
+  font-style: italic;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+

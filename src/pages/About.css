@@ -1,0 +1,30 @@
+.about-container {
+  text-align: left;
+  max-width: 1450px;         
+  margin: 3rem auto;         
+  padding: 3rem 3rem 1.5rem 3rem;  
+  background: #ffffff;
+  border-radius: 12px;
+}
+
+.about-container h1, h2 {
+  color: rgb(19, 25, 81);
+}
+
+.about-container h3 {
+  color: rgb(19, 25, 81);
+  font-size: 1.5rem;  
+}
+
+.about-container p {
+  font-size: 1.2rem;
+}
+
+.our-story {
+ margin-top: 2.5rem;
+}
+
+.what-we-offer {
+  margin-top: 2.5rem;
+}
+

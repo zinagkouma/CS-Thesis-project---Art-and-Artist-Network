@@ -1,0 +1,246 @@
+:root {
+  --primary: #0a48a4;
+  --primary-700: #083b88;
+  --accent: #e4900a;
+  --bg: #ffffff;
+  --muted: #e6e7e9;
+  --text: #1f2937;
+  --success-bg: #e6f7ee;
+  --success-text: #147d3f;
+  --danger-bg: #ffe7e7;
+  --danger-text: #b30000;
+  --shadow: 0 2px 16px #0001;
+}
+
+
+/*Page container*/
+.usersroles{
+  padding: 24px;
+  color: var(--text);
+}
+
+
+/*Heading*/
+.usersroles_title{
+  margin: 0 0 12px 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0a1f4d;
+}
+
+
+/*Controls row*/
+.usersroles_controls{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 12px 0 20px;
+  flex-wrap: wrap;
+}
+
+.usersroles_input,
+.usersroles_select{
+  padding: 8px 12px;
+  border-radius: 7px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border-color 0.2s ease;
+  font-size: 1rem;
+}
+
+.usersroles_input{
+  width: 280px;
+  max-width: 100%;
+}
+
+.usersroles_input:focus,
+.usersroles_select:focus{
+  border-color: var(--primary);
+}
+
+.usersroles_refresh{
+  padding: 8px 12px;
+  border-radius: 7px;
+  border: 1px solid var(--primary);
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.usersroles_refresh:hover{
+  background: var(--primary-700);
+}
+
+.usersroles_refresh:active{
+  transform: translateY(1px);
+}
+
+
+/*Add Venue button*/
+.venueList_btn {
+  margin-left: auto;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  border: 1px solid #094b31;
+  background: #0a8684;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.addVenue_btn:hover {
+  background: #0c6b68;
+}
+
+
+/*Table wrapper*/
+.usersroles_tablewrapper{
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 500px;
+
+  background: var(--bg);
+  border-radius: 7px;
+  border: 1px solid #919395;
+}
+
+/*Scrollbar styling*/
+.usersroles_tablewrapper::-webkit-scrollbar {
+  width: 13px;  
+  height: 10px; 
+}
+
+.usersroles_tablewrapper::-webkit-scrollbar-track {
+  background: transparent;
+  margin-top: 6px;
+  margin-bottom: 6px;  
+}
+
+.usersroles_tablewrapper::-webkit-scrollbar-thumb {
+  background-color: #d1d5db; 
+  border-radius: 20px;  
+  border: 2px solid var(--bg);
+}
+
+.usersroles_tablewrapper::-webkit-scrollbar-thumb:hover {
+  background-color: #9ca3af; 
+}
+
+
+/*Table*/
+.usersroles_table{
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  min-width: 760px;
+}
+
+.usersroles_thead-row{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--muted);
+}
+
+.usersroles_th,
+.usersroles_td{
+  text-align: left;
+  padding: 7px 12px;
+  white-space: nowrap;
+}
+
+.usersroles_th:first-child,
+.usersroles-td:first-child {
+  padding-left: 15px;  
+}
+
+.usersroles-th{
+  font-weight: 600;
+  user-select: none;
+}
+
+.usersroles-th--sortable{
+  cursor: pointer;
+}
+
+.usersroles_tbody-row{
+  border-top: 1px solid var(--border);
+}
+
+
+/*Role select in row*/
+.usersroles_role{
+  padding: 6px;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+
+ /*Status state styles*/
+.usersroles_status{             
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+    
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+.usersroles_status--active{
+  background: var(--success-bg);
+  color: var(--success-text);
+}
+
+.usersroles_status--suspended{
+  background: var(--danger-bg);
+  color: var(--danger-text);
+}
+
+
+/*Actions*/
+.usersroles_actions{
+  display: flex;
+  gap: 8px;
+}
+
+.usersroles_btn{
+  padding: 6px 10px;
+  border-radius: 7px;
+  border: 1px solid #dfcf72;
+  background: #eee7cf;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.usersroles_btn:hover{
+  background: #eddea8
+}
+
+.usersroles_btn.delete{
+  border-color: #ffb3b3;
+  background: var(--danger-bg);
+  color: var(--danger-text);
+  border-radius: 7px;
+}
+
+.usersroles_btn.delete:hover{
+  background: #ffdcdc;
+}
+
+
+/*States*/
+.usersroles_empty,
+.usersroles_loading{
+  padding: 16px;
+  color: #6b7280;
+}
+
+/*Admin gate*/
+.usersroles_gate{
+  padding: 24px;
+  font-weight: 800; 
+}

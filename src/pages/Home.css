@@ -1,0 +1,74 @@
+.home-header {
+  text-align: center;
+  margin-top: 100px;
+  color: rgb(19, 25, 81);
+  
+}
+
+
+/*Image Blocks*/
+.home-section {
+  position: relative;
+  top:40px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 30px 20px 0;
+  z-index: 1;
+}
+
+.home-card {
+  flex: 0 1 400px;           
+  max-width: 400px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.home-card:hover {
+  transform: translateY(-5px);
+}
+
+.home-card img {
+  width: 100%;
+  height: 300px; 
+  display: block;
+}
+
+.home-card h3 {
+  margin: 16px 0 8px;
+  font-size: 1.2rem;
+}
+
+.home-card p {
+  padding: 0 16px 16px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/*Get Started Button*/
+.get-started-container {
+  text-align: center;
+  margin-top: 100px;
+ 
+}
+
+
+.get-started-btn {
+  padding: 12px 28px;
+  background: #0a48a4;
+  color: #fff;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.get-started-btn:hover {
+  background: #2b56e3;
+  transform: translateY(-2px);
+}

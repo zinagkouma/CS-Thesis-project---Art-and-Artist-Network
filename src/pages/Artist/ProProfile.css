@@ -1,0 +1,171 @@
+.proProfile_container {
+  padding: 0; 
+}
+
+.proProfile_card {
+  margin: 20px;
+  padding: 40px;
+  background: #ffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.proProfile_card h2 {
+  color: #0a1f4d;
+  margin-top: 0;
+  margin-bottom: 8px;  
+}
+
+.proProfile_sub {
+  color: #666;
+  margin-bottom: 24px;  
+}
+
+.proProfile_msg {
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  font-weight: 600;  
+}
+
+.proProfile_msg.success {
+  background: #e6f7ee;
+  color: #147d3f;  
+}
+
+.proProfile_msg.error {
+  background: #ffe7e7;
+  color: #b30000;  
+}
+
+.proProfile_form {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;  
+  max-width: 1100px;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.full_width {
+  grid-column: 1 / -1;
+}
+
+.form_left {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: start;
+  gap: 20px;
+}
+
+.form_right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  margin-left: 40px;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+}
+
+.form_right textarea {
+  flex-grow: 1;
+  min-height: 150px;
+}
+
+.form_group label {
+  color: #333;
+  font-size: 0.95rem;
+  font-weight: 600;  
+}
+
+.form_group input[type="text"],
+.form_group select,
+.form_group textarea {
+  padding: 12px;
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.2s;
+}
+
+.form_group input:focus,
+.form_group select:focus,
+.form_group textarea:focus {
+  border-color: #e4900a;  
+}
+
+
+
+.portfolio_input {
+  resize: none;
+  border-radius: 8px;
+  overflow-y: auto;
+}
+
+.form_group.checkbox-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;  
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #e4900a;
+  cursor: pointer;
+}
+
+.checkbox-group label {
+  cursor: pointer;  
+}
+
+
+/*Gallery preview*/
+.gallery_preview {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.gallery_preview img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+}
+
+
+.proProfile_submit {
+  grid-column: 1 / -1;
+  padding: 14px;
+  width: 200px;
+  margin: 10px 0 0 0;
+  background: #0a48a4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;  
+}
+
+.proProfile_submit:hover {
+  background: #083b88;
+}
+
+.proProfile_submit:active {
+  transform: translateY(2px);
+}
