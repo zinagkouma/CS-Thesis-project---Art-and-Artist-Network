@@ -14,10 +14,8 @@ const transporter = nodemailer.createTransport({
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS
    },
-   // Because SSL is used
-   tls: { rejectUnauthorized: false }
+   ignoreTLS: true
    
-
 });
 
 transporter.verify()
@@ -30,7 +28,7 @@ router.post('/', async(req, res):Promise<void> => {
  // TODO: save to DB or send email  
 
   if (!message) {
-    res.status(400).json({ error: 'Message is required' });
+    res.status(400).json({error: 'Message is required'});
     return;
   }
 
@@ -38,7 +36,7 @@ router.post('/', async(req, res):Promise<void> => {
     await transporter.sendMail({
       from: `"Website Contact" <${process.env.EMAIL_USER}>`,
       to: 'event.finder@mail.com',
-      subject: 'New Contact Us Message',
+      subject: 'Contact Us Message',
       text: message.trim(),
       
     });
