@@ -3,7 +3,7 @@ import {useAuth} from '../context/AuthContext';
 import UserLayout from './User/userLayout';
 import ArtistLayout from './Artist/artistLayout';
 
-import './Contact.css'
+import './Contact.css';
 
 const Contact: React.FC = () => {
   const [message, setMessage] = useState('');
